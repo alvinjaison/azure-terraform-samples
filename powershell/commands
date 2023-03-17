@@ -1,0 +1,7 @@
+$virtualNetwork = New-AzVirtualNetwork -ResourceGroupName AZ900RGlod29539417 -Location EastUS2 -Name VNet1 -AddressPrefix 10.0.0.0/16
+
+$Vnet = Get-AzVirtualNetwork -Name "VNet1" -ResourceGroupName "AZ900RGlod29539417"
+
+$subnetConfig = Add-AzVirtualNetworkSubnetConfig -Name Production -VirtualNetwork $VNet -AddressPrefix 10.0.0.0/24
+
+$Vnet | Set-AzVirtualNetwork

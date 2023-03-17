@@ -1,0 +1,3 @@
+  az network vnet create --name VNet2 --resource-group AZ900RGlod29539417 --subnet-name Production --location eastus2
+
+  
